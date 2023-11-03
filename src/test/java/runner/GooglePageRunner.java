@@ -9,7 +9,7 @@ monochrome = true,
 dryRun = false,
 plugin = {"pretty", 
 		"html:target\\HtmlReport.html",
-		"rerun:target\\failedscenarios.txt"
+//		"rerun:target\\failedscenarios.txt"
 //		"usage:target\\UsageReport",
 //		"json:target\\JsonReport.json",
 //		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"

@@ -35,7 +35,7 @@ public class GooglePageStepDefinition {
 	}
 	@Then("should display Java Result Page")
 	public void should_display_java_result_page() {
-		Assert.assertEquals(driver.getTitle(), "Java Tutorial - Google Search page");
+		Assert.assertEquals(driver.getTitle(), "Java Tutorial - Google Search");
 	}
 	
 	@When("User search Selenium Tutorial")
