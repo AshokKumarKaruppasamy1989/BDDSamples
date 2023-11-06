@@ -7,6 +7,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CRMStepDefinition {
@@ -31,20 +32,43 @@ public class CRMStepDefinition {
 //		System.out.println("Launch Edge browser....");
 //	}
 	
-	@Before(order=2)
-	public static void launchBrowser() {
-		System.out.println("Launch browser....");
+//	Ordering Hooks
+//	@Before(order=2)
+//	public static void launchBrowser() {
+//		System.out.println("Launch browser....");
+//	}
+//	
+//	@Before(order=1)
+//	public static void readFromPropertyFile() {
+//		System.out.println("Reading from property....");
+//	}
+//	
+//	@Before(order=3)
+//	public static void launchDB() {
+//		System.out.println("Launch DB....");
+//	}
+	
+//	Tagged Ordering Hooks
+	@Before(value = "@SmokeTest", order=2)
+	public static void launchChromeBrowser() {
+		System.out.println("Launch Chrome browser....");
 	}
 	
-	@Before(order=1)
-	public static void readFromPropertyFile() {
-		System.out.println("Reading from property....");
+	@Before(value = "@SmokeTest", order=1)
+	public static void readFromPropertyFileStaging() {
+		System.out.println("Reading from Staging property....");
 	}
 	
-	@Before(order=3)
-	public static void launchDB() {
-		System.out.println("Launch DB....");
+	@Before(value = "@RegressionTest", order=2)
+	public static void launchEdgeBrowser() {
+		System.out.println("Launch Edge browser....");
 	}
+	
+	@Before(value = "@RegressionTest", order=1)
+	public static void readFromPropertyFileTest() {
+		System.out.println("Reading from TestingEnv property....");
+	}
+	
 	
 //	@After
 //	public static void closeBrowser() {
@@ -64,6 +88,14 @@ public class CRMStepDefinition {
 	@Given("User is logged in")
 	public void user_is_logged_in() {
 		System.out.println("User is logged in");
+	}
+	@When("User enters credentials")
+	public void user_enters_credentials() {
+		System.out.println("User enters the credentials");
+	}
+	@Then("should be navigated to dashboard page")
+	public void should_be_navigated_to_dashboard_page() {
+		System.out.println("Shoud display the dashbaord page");
 	}
 	@When("User create a new contacts")
 	public void user_create_a_new_contacts() {
@@ -101,7 +133,4 @@ public class CRMStepDefinition {
 	public void user_delete_a_tasks() {
 		System.out.println("User deleted the task");
 	}
-
-
-
 }

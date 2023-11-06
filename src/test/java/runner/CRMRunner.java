@@ -8,12 +8,12 @@ import io.cucumber.testng.CucumberOptions;
 //tags = "@RegressionTest",
 //tags = "@SmokeTest and @RegressionTest",
 //tags = "@SmokeTest or @RegressionTest",
-//tags = "@PhaseTwo",
-tags = "@PhaseTwo and @RegressionTest or @PhaseTwo and @SmokeTest",
+tags = "@PhaseTwo",
+//tags = "@PhaseTwo and @RegressionTest or @PhaseTwo and @SmokeTest",
 //tags = "@PhaseThree and not @RegressionTest",
 glue = "stepDefinition", 
 monochrome = true,
-dryRun = false,
+//dryRun = true,
 plugin = {"pretty"
 		}
 )
