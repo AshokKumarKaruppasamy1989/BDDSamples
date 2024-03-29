@@ -49,22 +49,22 @@ public class CRMStepDefinition {
 //	}
 	
 //	Tagged Ordering Hooks
-	@Before(value = "@SmokeTest", order=2)
+//	@Before(value = "@SmokeTest", order=2)
 	public static void launchChromeBrowser() {
 		System.out.println("Launch Chrome browser....");
 	}
 	
-	@Before(value = "@SmokeTest", order=1)
+//	@Before(value = "@SmokeTest", order=1)
 	public static void readFromPropertyFileStaging() {
 		System.out.println("Reading from Staging property....");
 	}
-	
-	@Before(value = "@RegressionTest", order=2)
+
+//	@Before(value = "@RegressionTest", order=2)
 	public static void launchEdgeBrowser() {
 		System.out.println("Launch Edge browser....");
 	}
 	
-	@Before(value = "@RegressionTest", order=1)
+//	@Before(value = "@RegressionTest", order=1)
 	public static void readFromPropertyFileTest() {
 		System.out.println("Reading from TestingEnv property....");
 	}
