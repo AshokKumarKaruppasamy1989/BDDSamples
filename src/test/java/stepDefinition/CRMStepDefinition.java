@@ -22,6 +22,7 @@ public class CRMStepDefinition {
 //		System.out.println("Close browser....");
 //	}
 	
+//	>>> Tagged Hooks or Conditional Hooks <<<
 //	@Before("@SmokeTest")
 //	public static void chromeLaunchBrowser() {
 //		System.out.println("Launch Chrome browser....");
@@ -48,7 +49,7 @@ public class CRMStepDefinition {
 //		System.out.println("Launch DB....");
 //	}
 	
-//	Tagged Ordering Hooks
+//	>>> Tagged Ordering Hooks <<<
 //	@Before(value = "@SmokeTest", order=2)
 	public static void launchChromeBrowser() {
 		System.out.println("Launch Chrome browser....");
